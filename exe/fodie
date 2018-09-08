@@ -1,3 +1,6 @@
 #!/usr/bin/env ruby
 
-require "fodie"
+require 'active_support/inflector'
+require 'fodie/cli'
+Fodie::CLI.start
+

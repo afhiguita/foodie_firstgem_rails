@@ -1,4 +1,6 @@
 require 'fodie'
+require 'active_support/inflector'
+
 
 RSpec.describe Fodie::Food do
   it "has a version number" do
@@ -11,5 +13,9 @@ RSpec.describe Fodie::Food do
 
   it "anything else is delicious" do
     expect(Fodie::Food.portray("Not Broccoli")).to eql("Delicious!")
+  end
+
+  it "pluralizes a word" do
+    expect(Fodie::Food.pluralize("Tomato")).to eql("Tomatoes")
   end
 end
